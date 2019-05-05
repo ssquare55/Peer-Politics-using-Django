@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+          {% for x in entertainmentapi.articles %}
+          <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{x.urlToImage}}" alt="No image to show">
+            <div class="card-body">
+              <h5 class="card-title">{{x.title}}</h5>
+              <p class="card-text">{{x.description}}</p>
+              <a href="{{x.url}}" class="btn btn-primary">LINK</a>
+            </div>
+            </div>
+            <br/>
+          </div>
+          {% endfor %}
+        </div>
+
+</div>
+{% endblock %}
